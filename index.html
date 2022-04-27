@@ -1,0 +1,99 @@
+    <html>
+        <head>
+            <title>Website Design using HTML and CSS</title>
+            <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
+            <div class="main">
+               <nav>
+                   <div class="logo">
+                       <img src="images/logo.png">
+                   </div>
+                   <div class="nav-links">
+                       <ul>
+                           <li><a href="#">Home</a></li>
+                           <li><a href="#">Phone</a></li>
+                           <li><a href="#">Accessories</a></li>
+                           <li><a href="#">Cart</a></li>
+                       </ul>
+                   </div>
+               </nav>
+               
+               <div class="information">
+                   <div class="overlay"></div>
+                   <img src="images/phone.png" class="phone">
+                   <div id="circle">
+                       <div class="feature one">
+                        <img src="images/camera.png">
+                           <div><h1>Camera</h1>
+                                <h2>Rear</h2>
+                                <p>48MP Wide Angle Camera<br>
+                                   50MP Ultra-Wide Angle Camera<br>
+                                   8MP Telephoto Camera<br>
+                                   2MP Mono Camera<br>
+                                   </p> 
+                               <h2>Front</h2>
+                                <p>16MP Wide Angle Camera
+                           </div>
+                       </div>
+                       <div class="feature two">
+                        <img src="images/processor.png">
+                           <div><h1>Processor<br></h1>
+                                <p>Snapdragon 888 Octa-core<br>
+                                   Octa core (2.84 GHz, Single Core + 2.42 GHz, <br>Tri core + 1.8 GHz, Quad core)<br>
+                                   12 GB RAM<br></p> 
+                           </div>
+                       </div>
+                       <div class="feature three">
+                        <img src="images/display.png">
+                           <div><h1>Display</h1>
+                                <p>6.7 inches (17.02 cm); Fluid AMOLED <br>
+                                   1440x3216 px (526 PPI)<br>
+                                   120 Hz Refresh Rate<br>
+                                   Gorilla Glass 5 Protection<br>
+                                   Bezel-less with punch-hole display<br></p> 
+                           </div>
+                       </div>
+                       <div class="feature four">
+                        <img src="images/battery.png">
+                           <div><h1>Battery</h1>
+                                <p>4500 mAh<br>
+                                   65W Warp Charging; USB Type-C port<br></p> 
+                           </div>
+                       </div>
+                   </div>
+               </div>
+                
+                <div class="controls">
+                    <img src="images/arrow.png" id="upBtn">
+                    <h3>Features</h3>
+                    <img src="images/arrow.png" id="downBtn">
+                </div>
+               
+            </div>
+            
+            <script>
+                var circle = document.getElementById("circle");
+                var upBtn = document.getElementById("upBtn");
+                var downBtn = document.getElementById("downBtn");
+                
+                var rotateValue = circle.style.transform;
+                var rotateSum;
+                
+                
+                upBtn.onclick = function()
+                {
+                    rotateSum = rotateValue + "rotate(-90deg)";
+                    circle.style.transform = rotateSum;
+                    rotateValue = rotateSum;
+                }
+                downBtn.onclick = function()
+                {
+                    rotateSum = rotateValue + "rotate(90deg)";
+                    circle.style.transform = rotateSum;
+                    rotateValue = rotateSum;
+                }
+            </script>
+            
+        </body>
+    </html>
